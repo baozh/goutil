@@ -1,3 +1,3 @@
 # goutil
 
-                                                                                                                                         :IMy personal golang utiliy lib.
+My personal golang utiliy lib.
