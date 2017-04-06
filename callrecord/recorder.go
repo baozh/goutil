@@ -10,12 +10,8 @@ import (
 )
 
 var (
-	DefaultRecorder = NewRecorder()
+	DefaultRecorder = NewRecorderInit()
 )
-
-func init() {
-	DefaultRecorder.Init()
-}
 
 func GetCounter(tag string) *Counter{
 	return DefaultRecorder.GetCounter(tag)
@@ -32,6 +28,15 @@ func NewRecorder() *Recorder {
 		filePath: ".",
 		counters: make(map[string]*Counter),
 	}
+}
+
+func NewRecorderInit() *Recorder {
+	rc := &Recorder {
+		filePath: ".",
+		counters: make(map[string]*Counter),
+	}
+	rc.Init()
+	return rc
 }
 
 //SetFilePath set the file path of recorder. It need called before Init().
