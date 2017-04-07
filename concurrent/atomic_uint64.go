@@ -1,6 +1,7 @@
 package concurrent
 
 import "sync/atomic"
+//this port of atomic function is not very good, see uber's outstanding work, refer to "go.uber.org/atomic"
 
 // AtomicInteger is a uint64 wrapper fo atomic
 type AtomicUint64 uint64
