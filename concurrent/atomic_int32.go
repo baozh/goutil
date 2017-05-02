@@ -1,7 +1,7 @@
 package concurrent
 
 import "sync/atomic"
-//this port of atomic function is not very good, see uber's outstanding work, refer to "go.uber.org/atomic"
+//this port of atomic function is not good, see uber's outstanding work, refer to "go.uber.org/atomic"
 
 // AtomicInteger is a int32 wrapper fo atomic
 type AtomicInt32 int32
